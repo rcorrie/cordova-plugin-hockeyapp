@@ -46,6 +46,7 @@ static NSString *const kHockeyAppPluginAppReachedTerminateEventKey = @"AppReache
         
         [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:hockeyAppKey];
         [[BITHockeyManager sharedHockeyManager] startManager];
+				[[BITHockeyManager sharedHockeyManager] setDisableUpdateManager: YES];
         [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
         initialized = YES;
     }
